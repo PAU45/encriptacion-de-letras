@@ -1,0 +1,109 @@
+/* Estilos base para dispositivos grandes como tablets y escritorios */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    width: 800px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    margin-top: 50px; /* Añadido un margen superior para separar del borde superior */
+}
+
+h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: fixed; /* Fijar la posición respecto a la ventana del navegador */
+    top: 20px; /* Distancia desde la parte superior */
+    left: 20px; /* Distancia desde la derecha */
+    text-align: right; /* Alinear texto a la derecha */
+}
+
+.input-output-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: calc(45% - 10px); /* Ajuste para dejar espacio entre los textarea */
+    height: 150px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+#inputText {
+    background-color: #fff;
+    color: #000;
+}
+
+#outputText {
+    background-color: #f0f0f0;
+    color: #666;
+}
+
+.buttons-container {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.image-container {
+    position: fixed; /* Fijar la posición respecto a la ventana del navegador */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 20px; /* Distancia desde la derecha */
+    text-align: right; /* Alinear contenido a la derecha */
+}
+
+.image-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Hacer que el contenedor ocupe el 90% del ancho disponible */
+    }
+
+    .input-output-container {
+        flex-direction: column; /* Cambiar a disposición de columna */
+    }
+
+    textarea {
+        width: 100%; /* Ajustar el ancho al 100% para ocupar todo el espacio disponible */
+        margin-bottom: 10px; /* Espacio entre los textarea */
+    }
+
+    .image-container {
+        position: relative; /* Cambiar a posición relativa para que no quede fijo */
+        text-align: center; /* Alinear al centro para dispositivos móviles */
+        margin-top: 20px; /* Ajustar margen superior */
+    }
+}
